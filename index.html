@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>一日一語</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Yomogi&family=Yuji+Syuku&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="loading">読み込み中…</div>
+
+  <main id="app" style="display:none;">
+
+    <!-- 今日の言葉 -->
+    <section id="homeView" class="view active">
+      <h1>今日の言葉</h1>
+
+      <div id="wordBox" class="wordBox"></div>
+
+      <button id="miniButton" class="mainCard" style="display:none;">
+        <span class="cardTitle">今日の言葉に添えて</span>
+        <span class="arrow">›</span>
+      </button>
+
+      <button id="templeButton" class="mainCard">
+        <span class="cardTitle">お寺の紹介</span>
+        <span class="arrow">›</span>
+      </button>
+
+      <button id="butsuenButton" class="mainCard">
+        <span class="cardTitle">法縁の紹介</span>
+        <span class="arrow">›</span>
+      </button>
+
+      <p class="note">今日も一つの言葉と出遇ってみませんか。</p>
+    </section>
+
+    <!-- 詳細表示 -->
+    <section id="detailView" class="view">
+      <button id="backButton" class="backButton">‹ 今日の言葉へ戻る</button>
+
+      <h1 id="detailTitle"></h1>
+      <div id="detailContent" class="detailContent"></div>
+    </section>
+
+  </main>
+
+  <!-- Firebase compat SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
